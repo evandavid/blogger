@@ -11,7 +11,13 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
-//= require_tree .
+//= require nprogress
+//= require nprogress-turbolinks
+//= require tinymce
+//= require admin/application
+//= require metisMenu.min
+//= require sb-admin-2

@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
   get 'home/index'
+  post 'preview'         => 'home#preview'
 
   namespace :admin do
+    resources :categories, except: :show
     resources :posts
-    get '/' => 'posts#index'
+    get '/'              => 'posts#index'
   end
+  
+  post '/tinymce_assets' => 'tinymce_assets#create'
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

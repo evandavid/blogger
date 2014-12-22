@@ -39,13 +39,20 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # gem 'debugger', group: [:development, :test]
 
 gem 'devise'
-gem 'elasticsearch-model', git: 'https://github.com/elasticsearch/elasticsearch-rails.git'
-gem 'elasticsearch-rails', git: 'https://github.com/elasticsearch/elasticsearch-rails.git'
+# gem 'elasticsearch-model', git: 'https://github.com/elasticsearch/elasticsearch-rails.git'
+# gem 'elasticsearch-rails', git: 'https://github.com/elasticsearch/elasticsearch-rails.git'
 gem 'tinymce-rails'
 gem 'paperclip'
 gem 'tinymce-rails-imageupload', '~> 4.0.0.beta'
 gem 'twitter-bootstrap-rails'
+gem 'font-awesome-rails'
+gem 'nprogress-rails'
 gem 'friendly_id'
+gem 'formtastic'
+gem 'formtastic-bootstrap'
+gem 'jquery-turbolinks'
+gem 'kaminari'
+gem 'kaminari-bootstrap', '~> 3.0.1'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'

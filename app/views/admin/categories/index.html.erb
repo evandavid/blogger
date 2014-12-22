@@ -1,5 +1,5 @@
 <div class="col-lg-12">
-    <h1 class="page-header">List Posts</h1>
+    <h1 class="page-header">List Categories</h1>
     <div class="right search_form">
       <div class="form-group input-group">
         <form method="GET">
@@ -11,35 +11,29 @@
         </form>
       </div>
     </div>
-
+    
     <div class="table-responsive">
           <table class="table">
               <thead>
                   <tr>
                       <th>#</th>
-                      <th>Title</th>
-                      <th>Content</th>
-                      <th>Category</th>
+                      <th width="70%">Name</th>
                       <th>Action</th>
                   </tr>
               </thead>
               <tbody>
-                <% @posts.each_with_index do |post, index|%>
+                <% @categories.each_with_index do |category, index|%>
                   <tr>
                       <td><%= index + 1%></td>
-                      <td><%= post.title%></td>
-                      <td><%= truncate(strip_tags(post.content), length: 255, omission: '... (continued)') %></td>
-                      <td><%= post.try(:category).try(:name)%></td>
+                      <td><%= category.name%></td>
                       <td>
-                        <%= link_to 'Edit', edit_admin_post_path(post)%> | 
-                        <%= link_to 'Show', admin_post_path(post)%> | 
-                        <%= link_to 'Delete', admin_post_path(post),  data: { confirm: 'Are you sure?' }, method: :delete%>
+                        <%= link_to 'Edit', edit_admin_category_path(category)%> | 
+                        <%= link_to 'Delete', admin_category_path(category), data: { confirm: 'Are you sure?' }, method: :delete%>
                       </td>
                   </tr>
-                <% end unless @posts.blank?%>
+                <% end unless @categories.blank?%>
               </tbody>
           </table>
-          <%= paginate @posts %>
       </div>
       <!-- /.table-responsive -->
 </div>
